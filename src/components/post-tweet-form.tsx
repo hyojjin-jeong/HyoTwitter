@@ -68,8 +68,13 @@ export default function PostTweetForm(){
     };
     const onFileChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         const { files } = e.target;
-        if (files && files.length === 1) {
-            setFile(files[0]);
+        if (files && files.length === 1 ) {
+            if (files[0].size < 1000000) {
+                setFile(files[0]);
+            }
+            else {
+                alert("file의 크기 1MB를 미만으로 설정해주세요 ㅠㅠ");
+            }
         }
     };
     const onSubmit = async(e:React.FormEvent<HTMLFormElement>) => {
