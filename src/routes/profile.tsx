@@ -3,7 +3,7 @@ import { auth, db, storage } from "../firebase";
 import React, { useEffect, useState } from "react";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { updateProfile } from "firebase/auth";
-import { collection, getDocs, limit, orderBy, query, where } from "firebase/firestore";
+import { collection, doc, getDocs, limit, orderBy, query, where } from "firebase/firestore";
 import { ITweet } from "../components/timeline";
 import Tweet from "../components/tweet";
 
@@ -48,6 +48,18 @@ const Tweets = styled.div`
     gap: 10px;
 `;
 
+const EditButton = styled.button`
+  background-color: tomato;
+  color: white;
+  font-weight: 600;
+  border: 0;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
 export default function Profile(){
     const user = auth.currentUser;
     const [avatar, setAvatar] = useState(user?.photoURL);
@@ -90,6 +102,22 @@ export default function Profile(){
     useEffect(() => {
         fetchTweets();
     }, []);
+    const onNameEdit = async () => {
+        try {
+            if(!user) return;
+            let editpop = prompt('수정할 닉네임을 적어주세요!');
+            let upname = editpop;
+            if(upname){
+                await updateProfile(user, {
+                displayName: upname,
+                });
+                alert('닉네임이 수정되었습니다! 새로고침을 해주세요 ><');
+            }
+        } catch (e) {
+            console.log(e);
+        } finally {
+        }
+    };
     return (
         <Wrapper>
             <AvatarUpload htmlFor="avatar">
@@ -105,6 +133,7 @@ export default function Profile(){
             <Name>
                 { user?.displayName ?? "Anonymous"}
             </Name>
+            <EditButton onClick={onNameEdit}>Name Edit</EditButton>
             <Tweets>
                 {tweets.map(tweet => <Tweet key={tweet.id} {...tweet}/>)}
             </Tweets>
