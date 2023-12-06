@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h1`
     font-size: 42px;
+    color: plum;
 `;
 
 export const Form = styled.form`
@@ -25,10 +26,11 @@ export const Form = styled.form`
 export const Input = styled.input`
     padding: 10px 20px;
     border-radius: 50px;
-    border: none;
     width: 100%;
     font-size: 16px;
+    border-color: plum;
     &[type="submit"] {
+        background-color: plum;
         cursor: pointer;
         &:hover {
             opacity: 0.8;
@@ -43,6 +45,7 @@ export const Error = styled.span`
 
 export const Switcher = styled.span`
     margin-top: 20px;
+    color: black;
     a {
         color: plum;
     }
