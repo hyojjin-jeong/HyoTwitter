@@ -36,7 +36,7 @@ export default function GithubButton() {
     };
     return(
         <Button onClick={onClick}>
-            <Logo src="dist/github-logo.svg" />
+            <Logo src="/github-logo.svg" />
             Continue with Github
         </Button>
     );

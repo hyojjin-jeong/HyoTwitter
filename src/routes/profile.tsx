@@ -3,7 +3,7 @@ import { auth, db, storage } from "../firebase";
 import React, { useEffect, useState } from "react";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { updateProfile } from "firebase/auth";
-import { collection, doc, getDocs, limit, orderBy, query, where } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query, where } from "firebase/firestore";
 import { ITweet } from "../components/timeline";
 import Tweet from "../components/tweet";
 
@@ -39,6 +39,7 @@ const AvatarInput = styled.input`
 
 const Name = styled.span`
     font-size: 22px;
+    color: plum;
 `;
 
 const Tweets = styled.div`
@@ -49,7 +50,7 @@ const Tweets = styled.div`
 `;
 
 const EditButton = styled.button`
-  background-color: tomato;
+  background-color: purple;
   color: white;
   font-weight: 600;
   border: 0;
