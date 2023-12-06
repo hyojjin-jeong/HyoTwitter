@@ -15,7 +15,7 @@ const TextArea = styled.textarea`
     padding: 20px;
     border-radius: 20px;
     font-size: 16px;
-    color: white;
+    color: purple;
     background-color: white;
     width: 100%;
     resize: none;
