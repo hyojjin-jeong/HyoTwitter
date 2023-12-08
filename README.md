@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+# Twitter 클론 코딩
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 개발 환경
+- firebase
+- 개발 언어 : typescript, javascript, css, react.js, NoSQL
 
-Currently, two official plugins are available:
+### 노션
+https://leeward-bug-1ce.notion.site/7a538cfb336542d0b43986c03537a30b?pvs=4
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 배포 사이트
+(1.0.0 버전)https://hyotwitter-65102.web.app
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 구현 화면
+<img width="850" alt="스크린샷 2023-12-08 오후 8 44 33" src="https://github.com/hyojjin-jeong/HyoTwitter/assets/64136923/2c2c69d7-5e43-4b32-9d46-c316c2e3bf3d">
